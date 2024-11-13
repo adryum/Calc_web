@@ -125,3 +125,6 @@
     flex: 3;
     background: rgb(20, 190, 230);
 }
+.delete-history-entry-button {
+    display: flex;
+}
