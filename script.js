@@ -15,7 +15,6 @@ document.querySelectorAll(".button").forEach(element => {
     }
     
     element.addEventListener('click', (e) => {
-        calcScreen.innerHTML += e.target.textContent;
 
         // Allows another comma to be placed after these operations
         if (
@@ -24,7 +23,11 @@ document.querySelectorAll(".button").forEach(element => {
             e.target.textContent === "+" ||
             e.target.textContent === "-"
         ) {
+            // Adds spaces for operators
+            calcScreen.innerHTML += ` ${e.target.textContent} `;
             isCommaPlaced = false;
+        } else {
+            calcScreen.innerHTML += e.target.textContent;
         }
     });
 });
@@ -34,12 +37,12 @@ document.getElementById("dot").addEventListener("click", (e) => {
         isCommaPlaced = true;
     }
 });
-document.getElementById("AC").addEventListener("click", (e) => {
+document.getElementById("AC").addEventListener("click", () => {
    calcScreen.innerHTML = "";
     // Allows another comma to be placed
     isCommaPlaced = false;
 });
-document.getElementById("equals").addEventListener("click", (e) => {
+document.getElementById("equals").addEventListener("click", () => {
     // Calculate input:
     let result = calculate();
     // Saves input to history
@@ -49,6 +52,8 @@ document.getElementById("equals").addEventListener("click", (e) => {
     
     // Shows result on screen
     calcScreen.innerHTML = result;
+    // Makes it so there cant be a comma placed to the result
+    isCommaPlaced = true;
 });
 
 function calculate() {

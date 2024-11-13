@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="container">
         <div class="upper-part">
             <div id="calc-screen"></div>
-            <div id="AC" class="button">AC</div>
+            <div id="AC" class="button color1">AC</div>
         </div>
         <div class="middle-part">
             <div id="numbers">
@@ -23,22 +23,25 @@
                 <div id="7" class="button">7</div>
                 <div id="8" class="button">8</div>
                 <div id="9" class="button">9</div>
-                <div id="dot" class="button">.</div>
+                <div id="dot" class="button color1">.</div>
                 <div id="0" class="button">0</div>
-                <div id="equals" class="button">=</div>
+                <div id="equals" class="button color1">=</div>
             </div>
             <div id="operations">
-                <div id="add" class="button">+</div>
-                <div id="sub" class="button">-</div>
-                <div id="multiply" class="button">*</div>
-                <div id="divide" class="button">/</div>
+                <div id="add" class="button color1">+</div>
+                <div id="sub" class="button color1">-</div>
+                <div id="multiply" class="button color1">*</div>
+                <div id="divide" class="button color1">/</div>
             </div>
         </div>
         <div class="lower-part">
-            <div class="side">History</div>
+            <div class="side">
+                History
+                <button class="delete-history-entry-button" onclick="clearHistory()">Clear History</button>
+            </div>
             <div id="history-data"></div>
         </div>
     </div>
 </body>
 </html>
-<script src="index.js"></script>
+<script src="script.js"></script>
