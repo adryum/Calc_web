@@ -9,7 +9,7 @@
 <body>
     <div id="container">
         <div class="upper-part">
-            <div id="calc-screen"></div>
+            <input type="text" id="calc-screen" oninput="this.value = this.value.replace(/[^0123456789\/*\-+.]/g, '');">
             <div id="AC" class="button color1">AC</div>
         </div>
         <div class="middle-part">

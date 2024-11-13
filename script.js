@@ -24,21 +24,21 @@ document.querySelectorAll(".button").forEach(element => {
             e.target.textContent === "-"
         ) {
             // Adds spaces for operators
-            calcScreen.innerHTML += ` ${e.target.textContent} `;
+            calcScreen.value += ` ${e.target.textContent} `;
             isCommaPlaced = false;
         } else {
-            calcScreen.innerHTML += e.target.textContent;
+            calcScreen.value += e.target.textContent;
         }
     });
 });
 document.getElementById("dot").addEventListener("click", (e) => {
     if (!isCommaPlaced) { // Allows only one comma for one number
-        calcScreen.innerHTML += e.target.textContent;
-        isCommaPlaced = true;
+        calcScreen.value += e.target.textContent;
+        isCommaPlaced = true
     }
 });
 document.getElementById("AC").addEventListener("click", () => {
-   calcScreen.innerHTML = "";
+   calcScreen.value = "";
     // Allows another comma to be placed
     isCommaPlaced = false;
 });
@@ -46,18 +46,18 @@ document.getElementById("equals").addEventListener("click", () => {
     // Calculate input:
     let result = calculate();
     // Saves input to history
-    history.push(calcScreen.innerHTML + " = " + result);
+    history.push(calcScreen.value + " = " + result);
 
     updateHistory();
     
     // Shows result on screen
-    calcScreen.innerHTML = result;
+    calcScreen.value = result;
     // Makes it so there cant be a comma placed to the result
     isCommaPlaced = true;
 });
 
 function calculate() {
-    return eval(calcScreen.innerHTML);
+    return eval(calcScreen.value);
 }
 
 function clearHistory() {
