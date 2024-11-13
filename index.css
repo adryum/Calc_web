@@ -15,35 +15,46 @@
     border-radius: 10px;
     background: rgb(190, 230, 230);
 }
-#calc-screen {
-    margin-top: 20px;
+
+
+.upper-part {
+    display: flex;
+    margin-top: var(--gaps);
+
+    align-items: center;
+
     height: 100px;
     width: 90%;
+    gap: var(--gaps);
+}
+.upper-part > * {
+    height: 100%;
+}
+#calc-screen {
+    display: flex;
+    font-size: 30px;
+    align-items: center;
 
+    flex: 10;
     background: aliceblue;
 }
-#button-box {
-    display: flex;
-
-    height: 80%;
-    width: 90%;
-    column-gap: var(--gaps);
-    row-gap: var(--gaps);
-
-    background: antiquewhite;
+#del {
+    flex: 3;
 }
-#button-box > div {
+
+
+#numbers, #operations {
     display: flex;
     flex-wrap: wrap;
 
-    align-items: space-evenly;
-    
     column-gap: var(--gaps);
     row-gap: var(--gaps);
 
     align-content: center;
     justify-content: center;
 }
+
+
 .button {
     display: flex;
 
@@ -55,22 +66,62 @@
     width: 90px;
     height: 80px;
 
-
     background: rgb(190, 190, 230);
+    transition: .3s;
 }
 .button:hover {
     filter: brightness(80%);
 }
-#upper-box {
+
+
+.middle-part {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
 
-
-    min-width: 100%;
-    height: 400px;
-    /* max-height: 400px; */
     background: rgb(20, 190, 230);
 }
 #numbers {
-    max-width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+
+    flex: 10;
+
+    background: bisque;
+}
+#operations {
+    display: flex;
+    flex: 4;
+
+    background: rgb(190, 240, 230);
+}
+
+
+.lower-part {
+    display: flex;
+
+    margin-bottom: var(--gaps);
+    height: 100%;
+    width: 90%;
+    background: rgb(240, 240, 230);
+}
+.lower-part > * {
+    width: 100%;
+}
+.side {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+}
+.history-data {
+    display: flex;
+    flex: 3;
+    background: rgb(20, 190, 230);
 }
