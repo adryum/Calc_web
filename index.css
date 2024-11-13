@@ -1,0 +1,76 @@
+:root {
+    --gaps: 20px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 20px;
+
+    height: 700px;
+    width: 500px;
+
+    border-radius: 10px;
+    background: rgb(190, 230, 230);
+}
+#calc-screen {
+    margin-top: 20px;
+    height: 100px;
+    width: 90%;
+
+    background: aliceblue;
+}
+#button-box {
+    display: flex;
+
+    height: 80%;
+    width: 90%;
+    column-gap: var(--gaps);
+    row-gap: var(--gaps);
+
+    background: antiquewhite;
+}
+#button-box > div {
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: space-evenly;
+    
+    column-gap: var(--gaps);
+    row-gap: var(--gaps);
+
+    align-content: center;
+    justify-content: center;
+}
+.button {
+    display: flex;
+
+    font-size: 30px;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 90px;
+    height: 80px;
+
+
+    background: rgb(190, 190, 230);
+}
+.button:hover {
+    filter: brightness(80%);
+}
+#upper-box {
+    display: flex;
+    flex-wrap: wrap;
+
+
+    min-width: 100%;
+    height: 400px;
+    /* max-height: 400px; */
+    background: rgb(20, 190, 230);
+}
+#numbers {
+    max-width: 400px;
+}
